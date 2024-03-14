@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(205deg, #00153F, #0376B7 63%, #FF03C8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.transparent-rectangle {
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.26); /* Transparan 26% */
+    z-index: 1; /* Munculkan rectangle di atas gradient */
+    border-radius: 30px; /* Pojok tumpul */
+}
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 3; /* Munculkan logo di atas rectangle dan teks */
+    width: 250px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: auto; 
+}
+.additional-image {
+    position: absolute;
+    bottom: 120px; /* Adjust the bottom distance */
+    left: 30px; /* Adjust the left distance */
+    width: 300px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 4; /* Munculkan gambar di atas rectangle, logo, dan teks */
+}
+.mascot {
+    position: absolute;
+    bottom: 180px; /* Adjust the bottom distance */
+    right: 950px; /* Adjust the right distance */
+    width: 200px; /* Adjust the width of the mascot */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 5; /* Munculkan mascot di atas rectangle, logo, dan teks */
+}
+.mascot:hover {
+    transform: scale(1.1); /* Ganti dengan faktor zoom yang diinginkan, contohnya 1.1 */
+    transition: transform 0.5s; /* Efek transisi untuk membuat perubahan terlihat mulus */
+}
+
+.won-image {
+    position: absolute;
+    bottom: 170px; /* Sesuaikan jarak bawah */
+    left: 80px; /* Sesuaikan jarak kanan */
+    width: 200px; /* Sesuaikan lebar gambar "won" */
+    height: auto; /* Pertahankan rasio aspek */
+    z-index: 6; /* Tampilkan gambar "won" di atas persegi, logo, mascot, dan teks */
+}
+.soul {
+    position: absolute;
+    bottom: 30px; /* Sesuaikan jarak bawah */
+    left: 350px; /* Sesuaikan jarak kanan */
+    width: 150px; /* Sesuaikan lebar gambar "won" */
+    height: auto; /* Pertahankan rasio aspek */
+    z-index: 6; /* Tampilkan gambar "won" di atas persegi, logo, mascot, dan teks */
+}
+.alamat {
+    position: absolute;
+    bottom: 60px; /* Sesuaikan jarak bawah */
+    left: 60px; /* Sesuaikan jarak kiri */
+    color: #FBB709; /* Warna teks kuning */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; /* Ukuran teks alamat */
+    z-index: 7; /* Tampilkan teks alamat di atas persegi, logo, mascot, dan teks */
+}
+
+.bold-text {
+    font-weight: bold; /* Membuat teks menjadi tebal */
+}
+.social-icons {
+    position: absolute;
+    bottom: 60px; /* Sesuaikan jarak bawah */
+    left: 80px; /* Sesuaikan jarak kanan */
+    display: flex;
+    align-items: center;
+    z-index: 8; /* Tampilkan ikon sosial di atas persegi, logo, mascot, dan teks */
+}
+.social-icons a {
+    margin-left: 10px; /* Sesuaikan jarak antara ikon sosial */
+}
+.social-icons img {
+    width: 35px; /* Sesuaikan lebar ikon sosial */
+    height: auto; /* Pertahankan rasio aspek */
+}
+.navbar {
+    position: fixed;
+    top: 80px; /* Sesuaikan jarak atas */
+    right: 220px; /* Sesuaikan jarak kanan */
+    z-index: 1010; /* Tampilkan navbar di atas elemen lainnya */
+}
+
+.navbar a {
+    color: #FFD659;
+    text-decoration: none;
+    margin-left: 85px; /* Sesuaikan jarak antara opsi navbar */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px; /* Ukuran teks navbar */
+    font-weight: light; /* Ketebalan teks navbar */
+    transition: color 0.5s, font-weight 0.5s; /* Efek transisi warna dan ketebalan font */
+}
+
+.navbar a:hover {
+    color: #FF03C8; /* Ganti dengan warna yang diinginkan saat hover */
+}
+.navbar .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    z-index: 1000;
+    width: max-content; /* Menggunakan max-content agar lebarnya sesuai dengan kontennya */
+    white-space: nowrap; /* Mencegah pemotongan teks ke baris baru */
+    left: 85px; /* Sesuaikan jarak kiri dropdown dari menu utama */
+    margin-left: 0; /* Reset margin-left agar tidak mempengaruhi lebar */
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown-content a {
+    color: #000;
+    padding: 10px 15px; /* Menyesuaikan padding */
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    text-align: center; /* Menambahkan rata tengah */
+    font-size: 14px;
+    z-index: 1001;
+}
+
+.lacak-paket {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Ukuran teks Lacak Paket */
+    font-weight: bold; /* Ketebalan teks Lacak Paket */
+    position: absolute;
+    top: 150px; /* Sesuaikan jarak atas */
+    right: 200px; /* Sesuaikan jarak kanan */
+    text-align: center; /* Teks rata tengah */
+    z-index: 13;
+}
+
+.lacak-paket form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Sesuaikan jarak atas formulir */
+}
+
+.lacak-paket input {
+    padding: 15px; /* Meningkatkan padding untuk memperpanjang input */
+    margin-bottom: 15px; /* Meningkatkan jarak bawah input */
+    width: 400px; /* Lebar input diperbesar */
+    border-radius: 30px; /* Sudut tumpul */
+    border: none;
+    text-align: center; /* Teks rata tengah */
+    font-size: 12px; /* Ukuran font diperkecil */
+    position: relative; /* Tambahkan posisi relatif untuk perubahan posisi */
+    font-style: italic; /* Membuat font menjadi miring */
+    z-index: 10;
+}
+
+.lacak-paket button {
+    background-color: #FBB709; /* Warna latar belakang kuning */
+    color: #ffff; /* Warna teks biru */
+    padding: 10px;
+    width: 75px; /* Lebar input diperbesar */
+    font-weight: bold; /* Ketebalan teks Lacak Paket */
+    border: none;
+    cursor: pointer;
+    border-radius: 30px; /* Sudut tumpul */
+    z-index: 10;
+}
+
+.lacak-paket button:hover {
+    background-color: #FFD659; /* Warna latar belakang kuning muda saat dihover */
+}
+.icon {
+    font-size: 200px; /* Ukuran ikon */
+    color: #ffff; /* Warna ikon */
+    margin-right: 10px; /* Jarak kanan dari ikon ke teks */
+    transform: rotate(45deg); /* Membuat ikon miring sejauh 45 derajat */
+    z-index: 15;
+}
+.sugeng-rawuh {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px; /* Ukuran teks */
+    font-weight: normal;
+    position: absolute;
+    top: 200px; /* Sesuaikan jarak atas */
+    right: 10px; /* Sesuaikan jarak kanan */
+    z-index: 10;
+}
+.welcome-images {
+position: absolute; /* Tambahkan ini */
+bottom: 70px; /* Sesuaikan jarak atas */
+right: 70px; /* Sesuaikan jarak kanan */
+display: flex;
+justify-content: center;
+z-index: 1000;
+}
+
+.welcome-images img {
+width: 70px;
+height: auto;
+z-index: 2;
+margin: 0 20px; /* Sesuaikan jarak antara gambar */
+}
+.icon-container {
+    position: relative;
+    width: 100%;
+}
+
+.icon-container i {
+    position: absolute;
+    top: 35%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+
+/*pemdes ekspres*/
+.about-us {
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    position: fixed;
+    top: 50%; /* Tempatkan elemen pada tengah vertikal */
+    right: 20px; /* Sesuaikan dengan jarak kanan */
+    transform: translateY(-50%); /* Posisikan elemen ke atas sejauh setengah tinggi elemen itu sendiri */
+    text-align: center; /* Arahkan teks ke kanan */
+    z-index: 10;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-us-text {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-right: 90px; /* Sesuaikan margin kanan */
+    margin-left: 550px; /* Sesuaikan margin kiri */
+    z-index: 10;
+    text-align: center; /* Arahkan teks ke kanan */
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Style untuk formulir Cek Ongkir */
+.cek-ongkir-container {
+    position: fixed;
+    top: 150px; /* Sesuaikan jarak dari atas */
+    right: 250px; /* Sesuaikan jarak dari kanan */
+    background-color: rgba(255, 255, 255, 0.0); /* Latar belakang putih transparan */
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.543);
+    z-index: 1000; /* Atur nilai z-index sesuai kebutuhan */
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.cek-ongkir-container h2 {
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.cek-ongkir-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cek-ongkir-form label {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.cek-ongkir-form input {
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cek-ongkir-form input[type="submit"] {
+    padding: 8px 7px;
+    font-size: 14px;
+    background: linear-gradient(to right, #4e54c8, #f700ff);
+    color: #fff;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.cek-ongkir-form input[type="submit"]:hover {
+    background: linear-gradient(to right, #d236bf, #f9eb73);
+}
+
+/* Style untuk tabel cek ongkir */
+.table-container {
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+    position: fixed;
+    bottom: 250px; /* Sesuaikan jarak dari atas */
+    right: 400px; /* Sesuaikan jarak dari kanan */
+    z-index: 1000;
+    overflow: hidden; /* Mengatasi masalah overflow jika ada */
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 20px;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+th, td {
+    border: 1px solid #fffcfc;
+    padding: 10px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+th {
+    background-color: #e0dfdf;
+}
+
+tr {
+    background-color: #fbf9f9;
+}
+
+
+/* Style untuk login */
+.container {
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+    position: fixed;
+    max-width: 250px;
+    margin: 20px auto;
+    background-color: #ffffff00;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+    z-index: 1000;
+    bottom: 130px; /* Sesuaikan jarak dari atas */
+    right: 200px; /* Sesuaikan jarak dari kanan */
+    text-align: center; /* Mengatur tulisan di tengah */
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 14px;
+  }
+
+  button {
+    background-color: #e40dd5;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-top: 10px; /* Menambahkan margin atas agar terpisah dari elemen di atasnya */
+  }
+  
+  /* Tambahkan style untuk elemen select */
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 14px;
+  }
