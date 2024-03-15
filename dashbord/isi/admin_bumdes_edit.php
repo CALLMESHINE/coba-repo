@@ -83,11 +83,7 @@
                 <!-- form start -->
                 <form method="post" action="edit_admin_bumdes_aksi.php">
                   <div class="card-body">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
-                      <input type="text" name="id_petugas" value="<?php echo $d['id_petugas']; ?>" readonly>
-                    </div>
-
+                    
                     <div class="form-group">
                       <label for="exampleInputEmail1">NAMA</label>
                       <input type="text" name="nm_petugas" class="form-control" value="<?php echo $d['nm_petugas']; ?>">
@@ -95,7 +91,7 @@
 
                     <div class="form-group">
                       <label for="exampleInputPassword1">BUMDES</label>
-                      <select name="id_bumdes" id="id_bumdes" required>
+                      <select class="form-control" name="id_bumdes" id="id_bumdes" required>
                         <?php
                         include "../koneksi.php";
                         $data_bumdes = mysqli_query($koneksi, "select * from bumdes");

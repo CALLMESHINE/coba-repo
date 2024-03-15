@@ -81,10 +81,6 @@ include("head.php");
               <!-- form start -->
               <form method="post" action="edit_kecamatan_aksi.php">
                 <div class="card-body">
-                    <div class="form-group">
-                    <label for="exampleInputEmail1">ID</label>
-                    <input type="text" name="id_kecamatan" value="<?php echo $d['id_kecamatan']; ?>" readonly>
-                    </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">KECAMATAN</label>

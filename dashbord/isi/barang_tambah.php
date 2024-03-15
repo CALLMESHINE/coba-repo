@@ -61,16 +61,12 @@
                 <!-- form start -->
                 <form method="post" action="barang_tambah_aksi.php">
                   <div class="card-body">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
                       <?php
                       include '../../koneksi.php';
                       $result = mysqli_query($koneksi, "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'pemdes' AND TABLE_NAME = 'barang'");
                       $row = mysqli_fetch_array($result);
                       $id_barang = $row['AUTO_INCREMENT'];
-                      echo '<input type="text" name="id" value="' . $id_barang . '" class="form-control" readonly>' ;
                       ?>
-                    </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">NAMA BARANG</label>

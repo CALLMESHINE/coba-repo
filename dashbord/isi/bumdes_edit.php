@@ -83,10 +83,6 @@
                 <!-- form start -->
                 <form method="post" action="edit_bumdes_aksi.php">
                   <div class="card-body">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
-                      <input type="text" name="id_bumdes" value="<?php echo $d['id_bumdes']; ?>" readonly>
-                    </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">NAMA BUMDES</label>

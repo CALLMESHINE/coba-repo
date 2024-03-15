@@ -59,16 +59,6 @@ include("head.php");
               <!-- form start -->
               <form method="post" action="kategori_tambah_aksi.php">
                 <div class="card-body">
-                    <div class="form-group">
-                    <label for="exampleInputEmail1">ID</label>
-                    <?php
-                        include '../../koneksi.php';
-                        $result = mysqli_query($koneksi, "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'pemdes' AND TABLE_NAME = 'kategori'");
-                        $row = mysqli_fetch_array($result);
-                        $id_kategori = $row['AUTO_INCREMENT'];
-                        echo '<input type="text" name="id" value="' . $id_kategori . '" readonly>';
-                      ?>
-                    </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">NAMA KATEGORI</label>

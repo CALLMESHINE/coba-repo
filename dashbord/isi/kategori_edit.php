@@ -84,11 +84,6 @@
                 <form method="post" action="edit_kategori_aksi.php">
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
-                      <input type="text" name="id_kategori" value="<?php echo $d['id_kategori']; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
                       <label for="exampleInputEmail1">NAMA KATEGORI</label>
                       <input type="text" name="nm_kategori" class="form-control"
                         value="<?php echo $d['nm_kategori']; ?>">

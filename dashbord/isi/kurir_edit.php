@@ -80,12 +80,7 @@ include("head.php");
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="edit_kurir_aksi.php">
-                <div class="card-body">
-                    <div class="form-group">
-                    <label for="exampleInputEmail1">ID</label>
-                    <input type="text" name="id_kurir" value="<?php echo $d['id_kurir']; ?>" readonly>
-                    </div>
-
+                
                   <div class="form-group">
                     <label for="exampleInputEmail1">NAMA KURIR</label>
                     <input type="text" name="nm_kurir" class="form-control" value="<?php echo $d['nm_kurir']; ?>">

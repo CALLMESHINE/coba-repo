@@ -155,14 +155,14 @@ function getStatusIcon($status)
                                     <div class="card-body">
                                         <!-- Formulir Pengiriman -->
                                         <div class="form-group">
-                                            <label for="id">ID</label>
+                                           
                                             <?php
                                             include '../../koneksi.php';
                                             $result = mysqli_query($koneksi, "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'pemdes' AND TABLE_NAME = 'pengiriman'");
                                             $row = mysqli_fetch_array($result);
                                             $id_pengiriman = $row['AUTO_INCREMENT'];
                                             // Input readonly untuk menampilkan ID pengiriman
-                                            echo '<input type="text" name="id" value="' . $id_pengiriman . '" readonly class="form-control">';
+                                        
                                             ?>
                                         </div>
                                         <div class="form-group">

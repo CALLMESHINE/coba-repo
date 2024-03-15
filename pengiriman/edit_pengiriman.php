@@ -177,7 +177,7 @@ function getStatusIcon($status)
 				</tr>
 				<tr>
 					<td>ALAMAT ASAL</td>
-					<td><textarea name="alamat_asal"><?php echo $d['alamat_asal']; ?></textarea></td>
+					<td><textarea class="form-select" name="alamat_asal"><?php echo $d['alamat_asal']; ?></textarea></td>
 				</tr>
 				<tr>
 					<td>BUMDES ASAL</td>

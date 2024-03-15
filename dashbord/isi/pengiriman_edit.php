@@ -230,11 +230,6 @@ function getStatusIcon($status)
                   ?>
                   <div>
                     <form method="post" action="edit_pengiriman_aksi.php">
-                      <div class="form-group">
-                        <label>ID</label>
-                        <input type="text" name="id_pengiriman" class="form-control"
-                          value="<?php echo $d['id_pengiriman']; ?>" readonly>
-                      </div>
 
                       <div class="form-group">
                         <label for="nm_petugas">Nama Petugas</label>

@@ -80,10 +80,6 @@
                 <!-- form start -->
                 <form method="post" action="edit_barang_aksi.php">
                   <div class="card-body">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
-                      <input type="text" name="id_barang" value="<?php echo $d['id_barang']; ?>" readonly>
-                    </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">NAMA BARANG</label>
@@ -97,7 +93,7 @@
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">KATEGORI</label>
-                      <select name="id_kategori" id="id_kategori" required>
+                      <select name="id_kategori" id="id_kategori" class="form-control" required>
                         <?php
                         $data_kategori = mysqli_query($koneksi, "select * from kategori");
                         while ($data_kat = mysqli_fetch_array($data_kategori)) {
@@ -110,17 +106,17 @@
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">NO RESI</label>
-                      <input type="text" name="no_resi" value="<?php echo "PEMDES" . $d['id_barang'] . rand(100000, 999999); ?>" readonly>
+                      <input type="text" name="no_resi"  value="<?php echo "PEMDES" . $d['id_barang'] . rand(100000, 999999); ?>" readonly>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">BERAT BARANG</label>
-                      <input type="number" name="brt_barang" id="brt_barang" value="<?php echo $d['brt_barang']; ?>">
+                      <input type="number" class="form-control name="brt_barang" id="brt_barang" value="<?php echo $d['brt_barang']; ?>">
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputEmail1">BIAYA</label>
-                      <input type="number" name="biaya" value="<?php echo $d['biaya']; ?>">
+                      <input type="number" class="form-control name="biaya" value="<?php echo $d['biaya']; ?>">
                     </div>
                   </div>
                   <!-- /.card-body -->

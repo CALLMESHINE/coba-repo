@@ -113,7 +113,6 @@ date_default_timezone_set('Asia/Bangkok');
                       <thead>
                         <tr>
                           <th>NO</th>
-                          <th>ID</th>
                           <th>Nama Petugas</th>
                           <th>Nama Pengirim</th>
                           <th>No. HP Pengirim</th>
@@ -154,9 +153,6 @@ WHERE p.id_bumdes_asal = '$id_bumdes'";
                           <tr>
                             <td>
                               <?php echo $no++; ?>
-                            </td>
-                            <td>
-                              <?php echo isset($d['id_pengiriman']) ? $d['id_pengiriman'] : ''; ?>
                             </td>
                             <td>
                               <?php echo isset($d['nm_petugas']) ? $d['nm_petugas'] : ''; ?>

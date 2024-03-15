@@ -91,10 +91,7 @@ $result_detail_pengiriman = mysqli_query($koneksi, $query_detail_pengiriman);
                             <table class="table table-bordered">
                                 <?php if ($result_detail_pengiriman && mysqli_num_rows($result_detail_pengiriman) > 0): ?>
                                     <?php $data_pengiriman = mysqli_fetch_assoc($result_detail_pengiriman); ?>
-                                    <tr>
-                                        <th>ID Pengiriman</th>
-                                        <td><?php echo $data_pengiriman['id_pengiriman']; ?></td>
-                                    </tr>
+                                  
                                     <tr>
                                         <th>No Resi</th>
                                         <td><?php echo $data_pengiriman['no_resi']; ?></td>
@@ -121,7 +118,6 @@ $result_detail_pengiriman = mysqli_query($koneksi, $query_detail_pengiriman);
                         <div class="card-body">
                             <table class="table table-bordered">
                                 <tr>
-                                    <th>ID Barang</th>
                                     <th>Nama Barang</th>
                                     <th>Jumlah Barang</th>
                                     <th>KATEGORI</th>
@@ -147,7 +143,6 @@ $result_detail_pengiriman = mysqli_query($koneksi, $query_detail_pengiriman);
                                 mysqli_data_seek($result_detail_pengiriman, 0); // Kembalikan pointer hasil query ke awal
                                 while ($data_barang_kirim = mysqli_fetch_assoc($result_detail_pengiriman)) {
                                     echo "<tr>";
-                                    echo "<td>{$data_barang_kirim['id_barang_kirim']}</td>";
                                     echo "<td>{$data_barang_kirim['nm_barang']}</td>";
                                     echo "<td>{$data_barang_kirim['jml_barang']}</td>";
                                     echo "<td>{$data_barang_kirim['id_kategori']}</td>";

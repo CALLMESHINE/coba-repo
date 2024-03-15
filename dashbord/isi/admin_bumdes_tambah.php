@@ -62,13 +62,12 @@
                 <form method="post" action="admin_bumdes_tambah_aksi.php">
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ID</label>
+                    
                       <?php
                       include '../../koneksi.php';
                       $result = mysqli_query($koneksi, "SHOW TABLE STATUS LIKE 'admin_bumdes'");
                       $row = mysqli_fetch_array($result);
                       $id_petugas = $row['Auto_increment'];
-                      echo '<input type="text" name="id" value="' . $id_petugas . '" readonly>';
                       ?>
                     </div>
 
@@ -79,7 +78,7 @@
 
                     <div class="form-group">
                       <label for="exampleInputPassword1">NAMA BUMDES</label>
-                      <select name="id_bumdes" id="id_bumdes" required>
+                      <select class="form-control" name="id_bumdes" id="id_bumdes" required>
                         <?php
                         $data = mysqli_query($koneksi, "SELECT * FROM bumdes");
                         while ($d = mysqli_fetch_array($data)) {
